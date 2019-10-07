@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="using:UnofficialSagradaCompanion"
+             mc:Ignorable="d"
+             x:Class="UnofficialSagradaCompanion.Views.BoardSelect">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <!-- The Buttons of the base game-->
+        <Button x:Name="RedButton"
+                Text="Red"
+                Grid.Row="0" Grid.Column="0" 
+                Command="{Binding PressBoardButton}"
+                CommandParameter="{x:Static local:Models.Resources.PlayerBoard.Red}" />
+        <Button x:Name="BlueButton"
+                Text="Blue"
+                Grid.Row="0" Grid.Column="1"
+                Command="{Binding PressBoardButton}"
+                CommandParameter="{x:Static local:Models.Resources.PlayerBoard.Blue}" />
+        <Button x:Name="GreenButton"
+                Text="Green"
+                Grid.Row="1" Grid.Column="0"
+                Command="{Binding PressBoardButton}"
+                CommandParameter="{x:Static local:Models.Resources.PlayerBoard.Green}" />
+        <Button x:Name="PurpleButton"
+                Text="Purple"
+                Grid.Row="1" Grid.Column="1"
+                Command="{Binding PressBoardButton}"
+                CommandParameter="{x:Static local:Models.Resources.PlayerBoard.Purple}" />
+
+        <!-- The Sepparator -->
+        <StackLayout
+            Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <BoxView Style="{StaticResource Separator}" />
+            <Label Text="Expansion Boards"
+                   FontSize="Large"
+                   HorizontalOptions="Center" VerticalOptions="Center"
+                   />    
+        </StackLayout>
+
+        <!-- The Buttons of the 5/6 Expansion-->
+        <Button x:Name="YellowButton"
+                Text="Yellow"
+                Grid.Row="3" Grid.Column="0" 
+                Command="{Binding PressBoardButton}"
+                CommandParameter="{x:Static local:Models.Resources.PlayerBoard.Yellow}" />
+        <Button x:Name="OrangeButton"
+                Text="Orange"
+                Grid.Row="3" Grid.Column="1" 
+                Command="{Binding PressBoardButton}"
+                CommandParameter="{x:Static local:Models.Resources.PlayerBoard.Orange}" />
+        
+        <!-- Player Count and Next Button-->
+        <StackLayout Orientation="Horizontal"
+                     Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
+            <Button x:Name="Back"
+                    Text="&lt; Back"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="Back_Clicked" />
+            <Label Text="Player Count:"
+                   VerticalOptions="Center" />
+            <Label x:Name="CurrentCount"
+                   Text="0"
+                   VerticalOptions="Center" />
+            <Button x:Name="Next"
+                    Text="Next >"
+                    VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="Next_Clicked"/>
+        </StackLayout>
+        
+
+    </Grid>
+    
+ </ContentPage>
