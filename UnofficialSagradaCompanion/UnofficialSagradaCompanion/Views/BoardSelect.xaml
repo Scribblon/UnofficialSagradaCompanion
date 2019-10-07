@@ -6,7 +6,7 @@
              xmlns:local="using:UnofficialSagradaCompanion"
              mc:Ignorable="d"
              x:Class="UnofficialSagradaCompanion.Views.BoardSelect">
-    <Grid>
+    <Grid x:Name="PlayerSelectGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -20,28 +20,8 @@
         </Grid.ColumnDefinitions>
         
         <!-- The Buttons of the base game-->
-        <Button x:Name="RedButton"
-                Text="Red"
-                Grid.Row="0" Grid.Column="0" 
-                Command="{Binding PressBoardButton}"
-                CommandParameter="{x:Static local:Models.Resources.PlayerBoard.Red}" />
-        <Button x:Name="BlueButton"
-                Text="Blue"
-                Grid.Row="0" Grid.Column="1"
-                Command="{Binding PressBoardButton}"
-                CommandParameter="{x:Static local:Models.Resources.PlayerBoard.Blue}" />
-        <Button x:Name="GreenButton"
-                Text="Green"
-                Grid.Row="1" Grid.Column="0"
-                Command="{Binding PressBoardButton}"
-                CommandParameter="{x:Static local:Models.Resources.PlayerBoard.Green}" />
-        <Button x:Name="PurpleButton"
-                Text="Purple"
-                Grid.Row="1" Grid.Column="1"
-                Command="{Binding PressBoardButton}"
-                CommandParameter="{x:Static local:Models.Resources.PlayerBoard.Purple}" />
 
-        <!-- The Sepparator -->
+        <!-- The Sepparator 
         <StackLayout
             Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
             <BoxView Style="{StaticResource Separator}" />
@@ -49,19 +29,9 @@
                    FontSize="Large"
                    HorizontalOptions="Center" VerticalOptions="Center"
                    />    
-        </StackLayout>
+        </StackLayout> -->
 
         <!-- The Buttons of the 5/6 Expansion-->
-        <Button x:Name="YellowButton"
-                Text="Yellow"
-                Grid.Row="3" Grid.Column="0" 
-                Command="{Binding PressBoardButton}"
-                CommandParameter="{x:Static local:Models.Resources.PlayerBoard.Yellow}" />
-        <Button x:Name="OrangeButton"
-                Text="Orange"
-                Grid.Row="3" Grid.Column="1" 
-                Command="{Binding PressBoardButton}"
-                CommandParameter="{x:Static local:Models.Resources.PlayerBoard.Orange}" />
         
         <!-- Player Count and Next Button-->
         <StackLayout Orientation="Horizontal"
