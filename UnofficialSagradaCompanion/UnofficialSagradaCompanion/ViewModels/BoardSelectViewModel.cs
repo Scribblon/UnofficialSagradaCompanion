@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using UnofficialSagradaCompanion.Models;
-using UnofficialSagradaCompanion.Models.Resources;
+using UnofficialSagradaCompanion.Resources;
 using Xamarin.Forms;
 
 namespace UnofficialSagradaCompanion.ViewModels
@@ -32,7 +32,7 @@ namespace UnofficialSagradaCompanion.ViewModels
 
         public BoardSelectViewModel()
         {
-            PlayerSelect = DefaultSettingsModel.DefaultActiveBoards;
+            PlayerSelect = DefaultSettings.DefaultActiveBoards;
         }
 
     }

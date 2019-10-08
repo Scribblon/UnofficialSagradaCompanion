@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using UnofficialSagradaCompanion.Models.Resources;
+using UnofficialSagradaCompanion.Resources;
 
 namespace UnofficialSagradaCompanion.CustomElements
 {

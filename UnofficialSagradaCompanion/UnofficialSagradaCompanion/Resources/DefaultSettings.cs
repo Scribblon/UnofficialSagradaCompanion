@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using UnofficialSagradaCompanion.Models.Resources;
+using UnofficialSagradaCompanion.Resources;
 
 namespace UnofficialSagradaCompanion.Models
 {
-    struct DefaultSettingsModel
+    struct DefaultSettings
     {
-        public static readonly Dictionary<PlayerBoard, bool> DefaultActiveBoards = new Dictionary<PlayerBoard, bool>() {
+        public static readonly ImmutableDictionary<PlayerBoard, bool> DefaultActiveBoards = new Dictionary<PlayerBoard, bool>() {
                 {PlayerBoard.Blue, true},
                 {PlayerBoard.Green, true},
                 {PlayerBoard.Red, true},

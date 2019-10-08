@@ -1,4 +1,4 @@
-﻿namespace UnofficialSagradaCompanion.Models.Resources
+﻿namespace UnofficialSagradaCompanion.Resources
 {
     public enum SecretGoal
     {

@@ -5,7 +5,7 @@ using UnofficialSagradaCompanion.ViewModels;
 using UnofficialSagradaCompanion.CustomElements;
 using UnofficialSagradaCompanion.Models;
 using System.Collections.Generic;
-using UnofficialSagradaCompanion.Models.Resources;
+using UnofficialSagradaCompanion.Resources;
 
 namespace UnofficialSagradaCompanion.Views
 {
@@ -24,7 +24,7 @@ namespace UnofficialSagradaCompanion.Views
             BindingContext = new BoardSelectViewModel();
 
             // Generate and place buttons in the grid
-            foreach(KeyValuePair<PlayerBoard,bool> kvp in DefaultSettingsModel.DefaultActiveBoards)
+            foreach(KeyValuePair<PlayerBoard,bool> kvp in DefaultSettings.DefaultActiveBoards)
             {
                 // Create and format button
                 BoardSelectToggleButton button = new BoardSelectToggleButton(kvp.Key)
