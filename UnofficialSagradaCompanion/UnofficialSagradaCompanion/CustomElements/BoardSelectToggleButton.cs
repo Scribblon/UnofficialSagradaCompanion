@@ -7,10 +7,10 @@ namespace UnofficialSagradaCompanion.CustomElements
 {
     class BoardSelectToggleButton : ToggleButton
     {
-        public PlayerBoard ButtonBoard { get; private set; }
+        public PlayerBoard ButtonOfBoard { get; private set; }
         public BoardSelectToggleButton(PlayerBoard board)
         {
-            ButtonBoard = board;
+            ButtonOfBoard = board;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Text;
 using UnofficialSagradaCompanion.Resources;
 
@@ -14,6 +15,6 @@ namespace UnofficialSagradaCompanion.Models
                 {PlayerBoard.Purple, true},
                 {PlayerBoard.Orange, false},
                 {PlayerBoard.Yellow, false}
-            };
+            }.ToImmutableDictionary();
     }
 }

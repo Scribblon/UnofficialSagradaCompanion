@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using UnofficialSagradaCompanion.Resources;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,9 +12,16 @@ namespace UnofficialSagradaCompanion.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PlayerNameSelect : ContentPage
     {
-        public PlayerNameSelect()
+        public Dictionary<PlayerBoard, string> PlayerNames { get; private set; }
+
+        public PlayerNameSelect(PlayerBoard[] boards)
         {
             InitializeComponent();
+
+            // Create and set Dictionary for names
+            PlayerNames = new Dictionary<PlayerBoard, string>();
+            foreach(PlayerBoard board in boards)
+                PlayerNames.Add(board, "");
         }
 
         protected async void Back_Clicked(object sender, EventArgs e)

@@ -31,13 +31,17 @@ namespace UnofficialSagradaCompanion.Views
                 {
                     Text = kvp.Key.ToString(),
                     IsToggled = kvp.Value,
-                    Style = Application.Current.Resources["BoardToggleButton"] as Style,
+                    Style = Application.Current.Resources["BoardToggleButton"] as Style,                    
                 };
+                // Bind command to button
+                button.Clicked += (sender, args) => Board_Clicked(sender, args);
+
+                // Set button to the right state
                 VisualStateManager.GoToState(button, kvp.Value ? "ToggledOn" : "ToggledOff");
 
                 // Set in Grid
                 int x = (int)kvp.Key % PlayerSelectGrid.ColumnDefinitions.Count;
-                int y = (int)kvp.Key / 2;
+                int y = (int)kvp.Key / PlayerSelectGrid.ColumnDefinitions.Count;
                 PlayerSelectGrid.Children.Add(button, x, y);
             }
 
@@ -48,7 +52,13 @@ namespace UnofficialSagradaCompanion.Views
         }
         protected async void Next_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new PlayerNameSelect());
+            await Navigation.PushAsync(new PlayerNameSelect(((BoardSelectViewModel) BindingContext).GetSelectedBoards()));
+        }
+        //When a board is clicked it passes the change along to the ViewModel
+        protected void Board_Clicked(object sender, EventArgs e)
+        {
+            BoardSelectToggleButton button = (BoardSelectToggleButton)sender;
+            ((BoardSelectViewModel)BindingContext).SetBoardStatus(button.ButtonOfBoard, button.IsToggled);
         }
     }
 }
