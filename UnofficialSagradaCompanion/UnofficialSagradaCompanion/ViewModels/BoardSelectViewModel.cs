@@ -10,11 +10,30 @@ namespace UnofficialSagradaCompanion.ViewModels
 {
     public class BoardSelectViewModel : ViewModelBase
     {
-         Dictionary<PlayerBoard, bool> PlayerSelect;
+        private int playerCount = 0;
+
+        public String PlayerCount
+        {
+            set
+            {
+                if (int.TryParse(value, out int result))
+                    playerCount = result;
+                else
+                    playerCount = 0;
+                OnPropertyChanged(nameof(PlayerCount));
+            }
+            get
+            {
+                return playerCount.ToString();
+            }
+        }
+
+        protected Dictionary<PlayerBoard, bool> PlayerSelect;
 
         public BoardSelectViewModel()
         {
-
+            PlayerSelect = DefaultSettingsModel.DefaultActiveBoards;
         }
+
     }
 }

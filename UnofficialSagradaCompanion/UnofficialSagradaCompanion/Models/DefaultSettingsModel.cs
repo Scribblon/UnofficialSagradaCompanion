@@ -10,9 +10,9 @@ namespace UnofficialSagradaCompanion.Models
         public static readonly Dictionary<PlayerBoard, bool> DefaultActiveBoards = new Dictionary<PlayerBoard, bool>() {
                 {PlayerBoard.Blue, true},
                 {PlayerBoard.Green, true},
-                {PlayerBoard.Orange, true},
+                {PlayerBoard.Red, true},
                 {PlayerBoard.Purple, true},
-                {PlayerBoard.Red, false},
+                {PlayerBoard.Orange, false},
                 {PlayerBoard.Yellow, false}
             };
     }

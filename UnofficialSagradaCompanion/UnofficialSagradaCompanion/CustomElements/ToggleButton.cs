@@ -11,7 +11,7 @@ namespace UnofficialSagradaCompanion.CustomElements
         public event EventHandler<ToggledEventArgs> Toggled;
 
         public static BindableProperty IsToggledProperty =
-            BindableProperty.Create("IsToggled", typeof(bool), typeof(ToggleButton), false, propertyChanged: OnIsToggledChanged);
+            BindableProperty.Create(nameof(IsToggled), typeof(bool), typeof(ToggleButton), false, propertyChanged: OnIsToggledChanged);
 
         public ToggleButton()
         {
@@ -27,7 +27,7 @@ namespace UnofficialSagradaCompanion.CustomElements
         protected override void OnParentSet()
         {
             base.OnParentSet();
-            VisualStateManager.GoToState(this, "ToggledOff");
+            //VisualStateManager.GoToState(this, "ToggledOff");
         }
 
         static void OnIsToggledChanged(BindableObject bindable, object oldValue, object newValue)
