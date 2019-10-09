@@ -10,11 +10,11 @@ using UnofficialSagradaCompanion.Resources;
 namespace UnofficialSagradaCompanion.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class BoardSelect : ContentPage
+    public partial class BoardSelectView : ContentPage
     {
         // This is the screen to select the boards that are in play
         // Generates the buttons from an enum
-        public BoardSelect()
+        public BoardSelectView()
         {
             // Init
             InitializeComponent();
@@ -52,7 +52,7 @@ namespace UnofficialSagradaCompanion.Views
         }
         protected async void Next_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new PlayerNameSelect(((BoardSelectViewModel) BindingContext).GetSelectedBoards()));
+            await Navigation.PushAsync(new PlayerNameView(((BoardSelectViewModel) BindingContext).GetSelectedBoards()));
         }
         //When a board is clicked it passes the change along to the ViewModel
         protected void Board_Clicked(object sender, EventArgs e)

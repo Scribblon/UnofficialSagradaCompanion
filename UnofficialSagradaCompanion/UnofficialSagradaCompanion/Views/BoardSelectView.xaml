@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="UnofficialSagradaCompanion.Views.BoardSelect">
+             x:Class="UnofficialSagradaCompanion.Views.BoardSelectView">
     <StackLayout x:Name="SelectRoot">
         <Grid x:Name="PlayerSelectGrid"
               HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">

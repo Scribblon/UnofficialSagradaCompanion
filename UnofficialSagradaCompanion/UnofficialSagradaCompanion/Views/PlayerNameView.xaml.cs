@@ -10,11 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace UnofficialSagradaCompanion.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PlayerNameSelect : ContentPage
+    public partial class PlayerNameView : ContentPage
     {
         public Dictionary<PlayerBoard, string> PlayerNames { get; private set; }
 
-        public PlayerNameSelect(PlayerBoard[] boards)
+        public PlayerNameView(PlayerBoard[] boards)
         {
             InitializeComponent();
 
@@ -30,7 +30,7 @@ namespace UnofficialSagradaCompanion.Views
         }
         protected async void Next_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Scoring());
+            await Navigation.PushAsync(new ScoringView());
         }
     }
 }

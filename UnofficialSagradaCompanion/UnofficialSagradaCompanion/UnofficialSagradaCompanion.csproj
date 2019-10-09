@@ -12,31 +12,31 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\BoardSelect.xaml.cs">
-      <DependentUpon>BoardSelect.xaml</DependentUpon>
+    <Compile Update="Views\BoardSelectView.xaml.cs">
+      <DependentUpon>BoardSelectView.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\GoalSelect.xaml.cs">
-      <DependentUpon>GoalSelect.xaml</DependentUpon>
+    <Compile Update="Views\GoalSelectView.xaml.cs">
+      <DependentUpon>GoalSelectView.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\PlayerNameSelect.xaml.cs">
-      <DependentUpon>PlayerNameSelect.xaml</DependentUpon>
+    <Compile Update="Views\PlayerNameView.xaml.cs">
+      <DependentUpon>PlayerNameView.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\Scoring.xaml.cs">
-      <DependentUpon>Scoring.xaml</DependentUpon>
+    <Compile Update="Views\ScoringView.xaml.cs">
+      <DependentUpon>ScoringView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\BoardSelect.xaml">
+    <EmbeddedResource Update="Views\BoardSelectView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\GoalSelect.xaml">
+    <EmbeddedResource Update="Views\GoalSelectView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\PlayerNameSelect.xaml">
+    <EmbeddedResource Update="Views\PlayerNameView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Scoring.xaml">
+    <EmbeddedResource Update="Views\ScoringView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

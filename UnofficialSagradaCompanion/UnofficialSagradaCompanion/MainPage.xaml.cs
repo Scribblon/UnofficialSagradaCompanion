@@ -22,7 +22,7 @@ namespace UnofficialSagradaCompanion
 
         private async void Quick_Scoring_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new BoardSelect());
+            await Navigation.PushAsync(new BoardSelectView());
         }
     }
 }

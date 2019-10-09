@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace UnofficialSagradaCompanion.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Scoring : ContentPage
+    public partial class GoalSelectView : ContentPage
     {
-        public Scoring()
+        public GoalSelectView()
         {
             InitializeComponent();
         }
