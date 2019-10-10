@@ -6,6 +6,9 @@
              mc:Ignorable="d"
              x:Class="UnofficialSagradaCompanion.Views.BoardSelectView">
     <StackLayout x:Name="SelectRoot">
+        <!--The Grid which will be filled by the Behind Code
+            It's already defined to have 2 columns, the behindcode is able to adjust when this defenition changes 
+            Rows can auto generate, but is defined for good measure -->
         <Grid x:Name="PlayerSelectGrid"
               HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>
@@ -18,6 +21,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
         </Grid>
+        <!--Navigation (See if this can be generalized)-->
         <StackLayout x:Name="navigation"
                      Orientation="Horizontal">
             <Button x:Name="Back"

@@ -6,10 +6,33 @@
              mc:Ignorable="d"
              x:Class="UnofficialSagradaCompanion.Views.PlayerNameView">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout x:Name="RootStack">
+            
+            <!--Here the behindcode will generate -->
+            <StackLayout x:Name="PlayerStack"
+                         HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand" />
+
+
+            <!--Navigation (See if this can be generalized)-->
+            <StackLayout x:Name="navigation"
+                     Orientation="Horizontal">
+                <Button x:Name="Back"
+                        Text="&lt; Back"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="Back_Clicked" />
+                <Label Text="Player Count:"
+                       VerticalOptions="Center" />
+                <Label x:Name="PlayerCount"
+                       Text="{Binding PlayerCount}"
+                       VerticalOptions="Center" />
+                <Button x:Name="Next"
+                        Text="Next >"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="Next_Clicked" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
