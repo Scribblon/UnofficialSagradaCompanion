@@ -8,10 +8,15 @@
     <ContentPage.Content>
         <StackLayout x:Name="RootStack">
             
-            <!--Here the behindcode will generate -->
-            <StackLayout x:Name="PlayerStack"
-                         HorizontalOptions="FillAndExpand"
-                         VerticalOptions="FillAndExpand" />
+            <!--The PlayerGrid-->
+            <Grid x:Name="PlayerGrid"
+                  VerticalOptions="FillAndExpand">
+                <!--Two Columns are defined, the rows will be generated in the behindcode-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" /> <!--Icon Column-->
+                    <ColumnDefinition Width="*" /> <!--Entry Column-->
+                </Grid.ColumnDefinitions>
+            </Grid>
 
 
             <!--Navigation (See if this can be generalized)-->

@@ -35,5 +35,10 @@ namespace UnofficialSagradaCompanion.ViewModels
             playerCount = boards.Length;
         }
 
+        public void SetPlayerName(PlayerBoard board, String name)
+        {
+            PlayerNames[board] = name;
+        }
+
     }
 }
