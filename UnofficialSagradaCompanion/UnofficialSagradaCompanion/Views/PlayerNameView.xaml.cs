@@ -99,7 +99,7 @@ namespace UnofficialSagradaCompanion.Views
         }
         protected async void Next_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ScoringView());
+            await Navigation.PushAsync(new ScoringView((BindingContext as PlayerNameViewModel).PlayerNames));
         }
     }
 }

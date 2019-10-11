@@ -6,10 +6,66 @@
              mc:Ignorable="d"
              x:Class="UnofficialSagradaCompanion.Views.ScoringView">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout x:Name="RootStack">
+            <Grid x:Name="ScoringTable"
+                  BackgroundColor="Gray"
+                  RowSpacing="2"
+                  ColumnSpacing="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/> <!--PlayerIcon-->
+                    <ColumnDefinition Width="*"/> <!--Glass Score-->
+                    <ColumnDefinition Width="*"/> <!--Common Goal 1-->
+                    <ColumnDefinition Width="*"/> <!--Common Goal 2-->
+                    <ColumnDefinition Width="*"/> <!--Common Goal 3-->
+                    <ColumnDefinition Width="*"/> <!--Secret Goal-->
+                    <ColumnDefinition Width="*"/> <!--Current Total-->
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/> <!--Row for score icons and mystify option-->
+                    <RowDefinition Height="Auto"/> <!--Row for Observable Collections-->
+                </Grid.RowDefinitions>
+                
+                <!--Placement of the mystify check-->
+                <CheckBox Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" />
+                <Label Text="?" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" InputTransparent="True"/>
+                <!--Icons-->
+                <Label Text="gc" Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="c1" Grid.Row="0" Grid.Column="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="c2" Grid.Row="0" Grid.Column="3" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="c3" Grid.Row="0" Grid.Column="4" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="sg" Grid.Row="0" Grid.Column="5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Total" Grid.Row="0" Grid.Column="6" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            </Grid>
+            
+            
+            
+            
+
+            <BoxView Style="{StaticResource Separator}" />
+            <!--Location for a dynamic view?-->
+            <ContentView x:Name="ScoringSubView"
+                         HorizontalOptions="CenterAndExpand"
+                         VerticalOptions="CenterAndExpand" />
+
+            <!--Navigation (See if this can be generalized)-->
+            <StackLayout x:Name="navigation"
+                     Orientation="Horizontal">
+                <Button x:Name="Back"
+                        Text="&lt; Back"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="Back_Clicked" />
+                <Label Text="Player Count:"
+                       VerticalOptions="Center" />
+                <Label x:Name="PlayerCount"
+                       Text="{Binding PlayerCount}"
+                       VerticalOptions="Center" />
+                <Button x:Name="Next"
+                        Text="Next >"
+                        VerticalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
+                        Clicked="Next_Clicked" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

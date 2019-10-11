@@ -12,6 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="SubViews\CommonGoalView.xaml.cs">
+      <DependentUpon>CommonGoalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="SubViews\SecretGoalView.xaml.cs">
+      <DependentUpon>SecretGoalView.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\BoardSelectView.xaml.cs">
       <DependentUpon>BoardSelectView.xaml</DependentUpon>
     </Compile>
@@ -24,9 +30,18 @@
     <Compile Update="Views\ScoringView.xaml.cs">
       <DependentUpon>ScoringView.xaml</DependentUpon>
     </Compile>
+    <Compile Update="SubViews\GlassScoringView.xaml.cs">
+      <DependentUpon>GlassScoringView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="SubViews\CommonGoalView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SubViews\SecretGoalView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\BoardSelectView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -37,6 +52,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ScoringView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="SubViews\GlassScoringView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

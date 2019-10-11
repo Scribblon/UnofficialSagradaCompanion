@@ -7,21 +7,12 @@ namespace UnofficialSagradaCompanion.ViewModels
 {
     class PlayerNameViewModel : ViewModelBase
     {
-        private int playerCount;
-
         public String PlayerCount
         {
-            set
-            {
-                if (int.TryParse(value, out int result))
-                    playerCount = result;
-                else
-                    playerCount = 0;
-                OnPropertyChanged(nameof(PlayerCount));
-            }
+            private set { }
             get
             {
-                return playerCount.ToString();
+                return PlayerNames.Count.ToString();
             }
         }
         public Dictionary<PlayerBoard, string> PlayerNames { get; private set; }
@@ -32,7 +23,6 @@ namespace UnofficialSagradaCompanion.ViewModels
             PlayerNames = new Dictionary<PlayerBoard, string>();
             foreach (PlayerBoard board in boards)
                 PlayerNames.Add(board, "");
-            playerCount = boards.Length;
         }
 
         public void SetPlayerName(PlayerBoard board, String name)
